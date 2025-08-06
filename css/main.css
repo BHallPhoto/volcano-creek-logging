@@ -1,0 +1,776 @@
+:root {
+	--main-bg: rgb(240, 240, 240);
+	--dark-text-bg: rgb(8, 42, 53);
+	--secondary-bg: rgb(65, 97, 101);
+	--form-focus: rgb(78, 142, 161);
+	--french-gray-1: rgb(172, 176, 189);
+	--french-gray-2: rgb(202, 198, 210);
+	--alpha: 0.5;
+}
+
+* {
+  	box-sizing: border-box;
+}
+
+.images {
+  -webkit-transition: background-color .2s ease-in, border-color .2s ease-in, color .2s ease-in;
+          transition: background-color .2s ease-in, border-color .2s ease-in, color .2s ease-in;
+}
+
+html {
+  	scroll-behavior: smooth;
+  	overflow-x: hidden;
+  	height: 100%;
+}
+
+body {
+  	height: 100%;
+  	margin: 0;
+  	padding: 0;
+  	line-height: 1.8rem;
+  	background-color: var(--main-bg);
+  	font-size: 13px;
+}
+
+/* Fonts */
+.number-font {
+  	font-family: "Josefin Sans", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 300;
+  	font-style: normal;
+}
+
+.p-font {
+  	font-family: "Raleway", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+.h-font {
+  	font-family: "Montserrat", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+.patua {
+  	font-family: "Patua One", serif;
+  	font-weight: 400;
+  	font-style: normal;
+}
+/* End of Fonts */
+
+/* Header and Nav */
+.logo {
+  	padding: 10px 0;
+  	text-align: center;
+ 	height: 110px;
+}
+
+.logo img {
+  	height: 100%;
+}
+
+.menu {
+  	font-size: 12px;
+  	text-transform: uppercase;
+  	font-weight: 700;
+  	border-top: 1px solid var(--french-gray-2);
+  	border-bottom: 1px solid var(--french-gray-2);
+}
+
+.container {
+  	width: 100%;
+  	max-width: 960px;
+  	margin: 0 auto;
+}
+
+.container ul {
+  	/* display: block; */
+  	text-align: center;
+  	padding: 0;
+  	margin: 0;
+}
+
+.container ul .menu-li {
+	box-sizing: border-box;
+  	display: inline-block;
+  	margin: 4px 30px 2px 0;
+  	padding: 4px 0;
+}
+
+.container ul .menu-li:last-child {
+  	display: inline-block;
+  	margin: 4px 0 2px 0;
+  	padding: 4px 0;
+}
+
+.display-fix ul .menu-li {
+	margin: 0;
+}
+
+.container a {
+  	line-height: 1.8rem;
+  	color: var(--secondary-bg);
+  	font-size: 1rem;
+  	text-decoration: none;
+  	text-transform: uppercase;
+}
+
+.navi li:hover {
+	/* outline: 0.1rem inset var(--secondary-bg); */
+	box-shadow: inset 0px -2px 0px rgba(65, 97, 101, 0.8);
+}
+
+.navi li.active {
+  	box-shadow: inset 0px -3px 2px -2px var(--secondary-bg);
+}
+/* End of Header and Nav */
+
+/* Business Title and intro */
+.enterprises-title, .logging-title, .trucking-title, .career-title {
+  	background-color: var(--dark-text-bg);
+}
+
+.enterprises-bg {
+	background-image: url(../assets/bg.jpg);
+}
+.trucking-bg {
+	background-image: url(../assets/trucking-bg-2.jpg);
+}
+.logging-bg {
+	background-image: url(../assets/logging-bg.jpg);
+}
+.careers-bg {
+	background-image: url(../assets/career-bg.jpg);
+}
+.box {
+	backdrop-filter: blur(3px);
+}
+
+.business-title {
+  	/* background-image: url(../assets/logging-bg.jpg); */
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: 0% 50%;
+  	height: 100%;
+}
+
+.description-header-logging, .description-header-trucking, .description-header-career, .description-header-enterprises {
+  	text-transform: uppercase;
+  	letter-spacing: 6px;
+  	text-align: center;
+  	padding: 50px 0 80px 0;
+}
+
+.description-header-enterprises h2, .description-header-trucking h2, .description-header-logging h2, .description-header-career h2 {
+	/* font-family: "Montserrat", sans-serif; */
+	/* font-family: "Raleway", sans-serif; */
+  	font-family: "Cinzel", serif;
+	font-optical-sizing: auto;
+	font-size: 2rem;
+	color: var(--main-bg);
+	font-weight: 800;
+	text-shadow: 1px 1px 3px var(--dark-text-bg);
+	margin: 0 0 15px 0;
+}
+
+.description-header-career h3 {
+	font-family: "Cinzel", serif;
+	font-optical-sizing: auto;
+	font-size: 1.25rem;
+	color: var(--main-bg);
+	font-weight: 600;
+	text-shadow: 1px 1px 3px var(--dark-text-bg);
+	margin: 0 0 15px 0;
+}
+
+.description {
+  	padding-top: 34px;
+}
+
+.description p {
+  	font-size: 1rem;
+  	font-weight: normal;
+  	letter-spacing: 3px;
+  	color: var(--main-bg);
+  	text-transform: none;
+	z-index: 2;
+	@media (max-width: 840px) {
+		padding: 0 10px;
+	}
+}
+
+.page-links {
+	position: relative;
+	padding: 100px 0;
+	@media (max-width: 990px) {
+
+		padding-bottom: 150px;
+	}
+}
+
+.company-links {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 8px;
+	box-shadow: rgb(52, 67, 85) 0px 15px 25px -10px;
+	height: 100%;
+	/* width: 100%; */
+	/* max-width: 1004px; */
+	background-color: var(--main-bg);
+	position: absolute;
+	top: -30px;
+	left: calc((100vw - 975px)/2);
+	padding: 0 30px;
+	@media (max-width: 990px) {
+		height: auto;
+		padding: 15px 30px;
+		left: 15px;
+		width: calc(100vw - 30px);
+	}
+}
+
+.links-description h5 {
+	font-variant: small-caps;
+	text-align: center;
+	margin-top: 0.912rem;
+}
+
+.links-description p {
+	text-align: justify;
+	font-size: 0.94rem;
+}
+
+.company-links-btns {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	@media (max-width: 750px) {
+		flex-direction: column;
+		align-items: center;
+		width: 240px;
+	}
+}
+
+.enterprises-btn, .logging-btn, .trucking-btn {
+	padding: 10px 0;
+}
+
+.btn-links{
+	@media (max-width: 990px) {
+		font-size: .85rem;
+	}
+}
+
+.core-services .container h4 {
+	text-align: center;
+	font-family: "Cinzel", serif;
+	font-optical-sizing: auto;
+	font-variant: small-caps;
+	font-weight: 500;
+}
+
+.core-services .core-li {
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	margin: 0 15px;
+}
+
+.core-services {
+	height: auto;
+	@media (max-width: 990px) {
+		padding-top: 130px;
+	}
+}
+
+.core-li {
+	transition: transform 0.2s ease-in;
+}
+
+.core-li:hover {
+	color: var(--form-focus);
+	transform: scale(1.15);
+	cursor: default;
+}
+
+.career-desc {
+	padding-top: 10px;
+}
+
+.career-desc p {
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.over-img-btn {
+  	background: rgba(0, 0, 0, 0);
+  	color: var(--main-bg);
+  	font-size: 1rem;
+  	border-radius: 5px;
+  	border-style: none;
+  	outline: rgba(255, 255, 255, .5) solid 0.5px;
+  	padding: 8px 20px;
+  	font-variant: small-caps;
+}
+
+.over-img-btn:hover {
+  	cursor: pointer;
+  	color: var(--dark-text-bg);
+  	background: var(--main-bg);
+  	outline: var(--french-gray-1) solid 0.5px;
+}
+
+.over-img-btn:active {
+ 	background: var(--main-bg);
+  	box-shadow: inset 1px 1px 2px var(--dark-text-bg);
+  	outline: var(--dark-text-bg);
+}
+
+.over-img-btn:visited {
+  	background: rgba(0, 0, 0, 0);
+}
+
+.desc-btn {
+  	margin-top: 60px;
+}
+/* End of Business Title and Intro */
+
+/* About us Section */
+.about-logging, .about-trucking {
+	height: auto;
+	@media (max-width: 990px) {
+		padding-top: 50px;
+	}
+}
+
+.about-us, .contact {
+  	text-transform: uppercase;
+  	text-align: center;
+  	font-size: 3rem;
+  	padding: 30px 0;
+}
+
+.about h2 {
+  	padding-left: 15px;
+}
+
+.p-heading-number {
+  	font-size: 2.5rem;
+}
+
+.p-heading {
+  	font-variant: small-caps;
+  	font-size: 2.5rem;
+  	padding-left: 20px;
+  	line-height: 1px;
+	@media (max-width: 768px) {
+		font-size: 2.25rem;
+	}
+}
+
+.objective,
+.experience,
+.service-area,
+.servicing,
+.reliability,
+.sustainable-land,
+.beautify-restore {
+  	margin-bottom: 50px;
+}
+
+.objective p,
+.experience p,
+.service-area p,
+.servicing p,
+.reliability p,
+.reducing-wildfires p,
+.enhance-wildfire p,
+.sustainable-land p,
+.hauling-services p,
+.beautify-restore p,
+.mechanic p {
+  	font-size: 1rem;
+  	text-indent: 30px;
+	text-align: justify;
+  	padding: 0 40px;
+}
+
+.mechanic p {
+	@media (max-width: 990px) {
+		padding: 0;
+	}
+}
+
+.objective p:last-child,
+.experience p:last-child,
+.service-area p:last-child,
+.servicing p:last-child,
+.reliability p:last-child,
+.reducing-wildfires p:last-child,
+.beautify-restore p:last-child,
+.sustainable-land p:last-child,
+.hauling-services p:last-child,
+.enhance-wildfire p:last-child {
+	padding-bottom: 35px;
+}
+
+.enhance-wildfire h2,
+.sustainable-land h2,
+.beautify-restore h2,
+.reducing-wildfires h2,
+.objective h2,
+.experience h2,
+.service-area h2,
+.servicing h2,
+.reliability h2,
+.hauling-services h2 {
+  	padding: 0 40px;
+}
+
+.servicing img, .enhance-wildfire img {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.objective img,
+.service-area img,
+.hauling-services img,
+.beautify-restore img {
+  	max-width: 450px;
+  	float: right;
+  	margin-left: 20px;
+}
+
+.experience img,
+.reliability img,
+.sustainable-land img,
+.reducing-wildfires img {
+  	max-width: 450px;
+  	float: left;
+  	margin-right: 20px;
+}
+
+.form-container {
+  	width: 80%;
+  	max-width: 700px;
+  	margin: 0 auto;
+}
+
+.form-container > h1, .form-container > p {
+	@media (max-width: 840px) {
+		padding: 0 10px;
+	}
+}
+
+.form-container > button {
+	@media (max-width: 840px) {
+		left: 10px;
+	}
+}
+
+.input-field .prefix.active  {
+  	color: var(--form-focus);
+}
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  	border-bottom: 1px solid var(--form-focus);
+  	box-shadow: 0 1px 0 0 var(--form-focus);
+}
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+  	color: var(--form-focus);
+}
+
+.two-form-field-div {
+	width: 50%;
+	@media (max-width: 840px) {
+		width: 100%;
+	}
+}
+
+.two-form-field {
+	display: flex;
+	flex-direction: row;
+	@media (max-width: 840px) {
+		flex-wrap: wrap;
+	}
+}
+
+.row {
+	@media (max-width: 840px) {
+		margin-bottom: 0;
+	}
+}
+
+#application .row .col {
+	@media (max-width: 840px) {
+		float: none;
+	}
+}
+
+#application .row .col.s12 {
+	margin-right: auto;
+	@media (max-width: 840px) {
+		width: 90%;
+	}
+}
+
+.btn {
+  	background-color: var(--form-focus);
+	z-index: 0;
+}
+
+.btn:hover {
+  	background-color: rgb(15, 57, 77);
+}
+
+.info-bg {
+  	background-color: var(--secondary-bg);
+  	color: var(--main-bg);
+  	width: 100%;
+  	margin-top: 50px;
+}
+
+.info-map-container {
+ 	display: block;
+  	margin: 0 auto;
+  	width: 1200px;
+}
+
+.cont1 {
+  	line-height: 35px;
+}
+
+.cont1 p {
+  	font-size: 1rem;
+}
+
+.cont1 .details-h5 {
+  	display: inline-block;
+}
+
+.cont1 .details-h5:hover {
+ 	cursor: pointer;
+}
+
+.details-day-open {
+  	padding-left: 18px;
+  	font-size: 1.125rem;
+}
+
+details {
+  	width: 100%;
+  	cursor: pointer;
+  	overflow: hidden;
+  	margin-bottom: .5rem;
+  	height: 100%;
+}
+
+
+
+details .day {
+  	font-size: 1.125rem;
+  	padding-left: 15px;
+  	font-variant-caps: small-caps;
+  	line-height: 20px;
+}
+
+details .hrs {
+  	padding-left: 20px;
+}
+
+details .clsd {
+  	width: 119px;
+  	text-align: center;
+}
+
+.row-footer {
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom: 0;
+  	height: 100%;
+}
+
+.map {
+  	width: 100%;
+  	padding: 15px 0 10px 0;
+}
+
+#map {
+  	box-shadow: 0px 0px 8px black;
+}
+
+.footer {
+  	font-family: "Montserrat", sans-serif;
+  	/* position: absolute; */
+  	bottom: 0;
+  	left: 0;
+  	background: rgb(29, 29, 29);
+  	/* height: 400px; */
+ 	width: 100%;
+}
+
+.social > h2 {
+  	width: 100%;
+  	margin: 20px auto 30px auto;
+  	display: inline-block;
+  	font-weight: 500;
+  	font-size: 1.8rem;
+  	text-align: center;
+  	color: #008390;
+  	text-transform: uppercase;
+}
+
+.icons {
+  	display: flex;
+  	justify-content: center;
+  	flex-direction: row;
+}
+
+.fb, .insta {
+  	position: relative;
+  	top: -15px;
+  	padding: 0 12px 20px 12px;
+}
+
+.info {
+  	font-weight: 400;
+  	font-size: 2rem;
+  	color: rgb(0,131,144);
+  	text-align: center;
+}
+.email-us {
+  	font-size: 2rem;
+  	font-weight: 300;
+}
+.info {
+  	font-size: 1rem;
+  	text-decoration: none;
+}
+.info a {
+  	text-decoration: none;
+  	font-weight: 300;
+}
+.addy {
+  	color: rgba(217, 243, 255, 0.5);
+  	font-size: 1.125rem;
+}
+
+.cp {
+  	color: rgba(217, 243, 255, 0.5);
+  	font-size: .85rem;
+  	line-height: .6;
+  	padding: 10px 0 10px 0;
+  	text-align: center;
+}
+
+.heart {
+  	color: rgb(255, 136, 0)
+}
+
+@media screen and (max-width: 840px) {
+  	.objective img,
+	.experience img,
+	.sustainable-land img,
+	.beautify-restore img,
+	.enhance-wildfire img,
+	.service-area img,
+	.reliability img,
+	.hauling-services img,
+	.reducing-wildfires img,
+	.servicing img {
+    	float: inherit;
+    	max-width: 100%;
+    	padding: 0 10px;
+    	margin: 0 auto;
+  	}
+
+  	.description-header-logging, .description-header-trucking {
+    	padding-top: 50px;
+  	}
+
+  	.description-header-logging h2, .description-header-trucking h2 {
+    	font-size: 1.85rem;
+  	}
+
+  	.form-container {
+    	width: 100%;
+  	}
+
+  	.cp {
+    	line-height: normal;
+  	}
+}
+
+/* Views */
+#volcano_img1 {
+ 	transition: .3s ease-in;
+}
+
+/* Mechani / Carb Clean */
+.clean-air {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+}
+
+.mechanic {
+	height: 100%;
+	padding: 30px 30px;
+	box-shadow: rgb(52, 67, 85) 0px 15px 25px -10px;
+	border: 1px solid rgba(52, 67, 85, 0.25);
+	border-radius: 8px;
+	@media (max-width: 990px) {
+		height: auto;
+		padding: 15px 30px;
+		left: 15px;
+		width: calc(100vw - 30px);
+	}
+}
+
+.mechanic div {
+	padding-bottom: 10px;
+}
+
+.clean-air-act-compliance .clean-header {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+#clean-air-link {
+	display: inline-block;
+	color: rgb(207, 79, 47);
+	text-indent: 0px;
+	text-transform: none;
+	font-variant: small-caps;
+	transition: transform 0.4s ease-in,
+				color 0.4s ease-in-out;
+}
+
+#clean-air-link:hover {
+	color: var(--form-focus);
+	transform: scale(.8);
+}
+
+#clean-air-link:active {
+	color: rgb(207, 79, 47);
+}
+
+/* Show Hide Form for Contact & CARB */
+#content {
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s ease-in-out;
+}
