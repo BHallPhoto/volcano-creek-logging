@@ -730,8 +730,9 @@ details .clsd {
 .mechanic {
 	height: 100%;
 	padding: 30px 30px;
+	margin-top: 30px;
 	box-shadow: rgb(52, 67, 85) 0px 15px 25px -10px;
-	border: 1px solid rgba(52, 67, 85, 0.25);
+	/* border: 1px solid rgba(52, 67, 85, 0.25); */
 	border-radius: 8px;
 	@media (max-width: 990px) {
 		height: auto;
@@ -770,7 +771,7 @@ details .clsd {
 }
 
 /* Show Hide Form for Contact & CARB */
-#content {
+#content-operator, #content-driver {
 	height: 0;
 	overflow: hidden;
 	transition: height 0.5s ease-in-out;
